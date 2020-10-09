@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import com.proguru.android.Constants.Companion.DATA
 import com.proguru.android.R
+import com.proguru.android.extension.showBackButton
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
@@ -18,8 +19,7 @@ class RegisterActivity : AppCompatActivity() {
 
         title = data
 
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        showBackButton()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
